@@ -52,14 +52,9 @@ async function postData(url = '', auth, data = {}) {
       botId,
       conversationId,
       userId,
-      message: "OverDueConv", // optional
+      message: "RelocationData", // optional
       contextVariables: [
-        {"name": "name", "value": name},
-        {"password": "password", "value": plainTextPassword},
-           {"password1": "password", "value": password},
-           {"password3": "plainTextPassword", "value": plainTextPassword},
-           {"plainTextPassword": "plainTextPassword", "value": plainTextPassword},
-          {"plainTextPassword1": "plainTextPassword", "value": "abc"}
+        {"employeeId": "employeeId", "value": employeeId}
       ],
     });
        window.close();     
