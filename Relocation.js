@@ -5,7 +5,7 @@ async function postData(url = '', auth, data = {}) {
       mode: 'cors',
       headers: {
         'Authorization': auth,
-        'Content-Type': 'application/json',
+        'Content-Type': 'x-content-type-options',
       },
       body: JSON.stringify(data),
     });
