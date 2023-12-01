@@ -19,11 +19,15 @@ async function postData(url = '', auth, data = {}) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
-const { createHash } = require('crypto');
- 
 function hash(string) {
-  return createHash('sha256').update(string).digest('hex');
+  const crypto = require('crypto'); // Import the crypto module
+
+  const hash = crypto.createHash('sha256'); // Create a SHA-256 hash object
+  hash.update(string); // Update the hash with the input string
+  const hashedString = hash.digest('hex'); // Convert the hash to a hexadecimal string
+  return hashedString; // Return the hashed string
 }
+
   
   // Post data when form is submitted
   submitForm = async function() {
