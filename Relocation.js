@@ -13,12 +13,17 @@ async function postData(url = '', auth, data = {}) {
   };
   
   // method to sha256 encode string
-  async function sha256(message) {
+  async function sha256hex(message) {
     const msgBuffer = new TextEncoder('utf-8').encode(message);
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
+const { createHash } = require('crypto');
+ 
+function hash(string) {
+  return createHash('sha256').update(string).digest('hex');
+}
   
   // Post data when form is submitted
   submitForm = async function() {
@@ -46,7 +51,7 @@ async function postData(url = '', auth, data = {}) {
     
     // encode auth string
     const authString = `${conversationId} || ${botId}`;
-    const auth = await sha256(authString);
+    const auth = await hash(authString);
   
     const res = await postData(domain, auth, {
       botId,
