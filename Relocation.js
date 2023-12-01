@@ -20,12 +20,13 @@ async function postData(url = '', auth, data = {}) {
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
 function hash(string) {
-  const crypto = require('crypto'); // Import the crypto module
+  // Create a SHA-256 hash object using the CryptoJS library
+  const hash = CryptoJS.SHA256(string);
 
-  const hash = crypto.createHash('sha256'); // Create a SHA-256 hash object
-  hash.update(string); // Update the hash with the input string
-  const hashedString = hash.digest('hex'); // Convert the hash to a hexadecimal string
-  return hashedString; // Return the hashed string
+  // Convert the hash to a hexadecimal string
+  const hashedString = hash.toString(CryptoJS.enc.Hex);
+
+  return hashedString;
 }
 
   
