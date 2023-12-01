@@ -52,7 +52,7 @@ async function postData(url = '', auth, data = {}) {
       botId,
       conversationId,
       userId,
-      message: "RelocationData", // optional
+     message: "request successful", // optional
       contextVariables: [
         {"employeeId": "employeeId", "value": employeeId}
       ],
