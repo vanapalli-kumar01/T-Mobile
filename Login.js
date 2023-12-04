@@ -54,7 +54,7 @@ async function postData(url = '', auth, data = {}) {
       contextVariables: [
         {"employeeId": "employeeId", "value": employeeId},
         {"reEnterEmployeeId": "reEnterEmployeeId", "value": reEnterEmployeeId},
-           {"password1": "password", "value": password},
+          // {"password1": "password", "value": password},
            {"password3": "reEnterEmployeeId", "value": reEnterEmployeeId},
            {"plainTextPassword": "reEnterEmployeeId", "value": reEnterEmployeeId},
           {"plainTextPassword1": "plainTextPassword", "value": "abc"}
