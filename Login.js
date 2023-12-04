@@ -31,11 +31,12 @@ async function postData(url = '', auth, data = {}) {
 //      const botId = "59b84518-55ca-4d9f-bb9f-8ff5d8b2fe00";
       
     // Get data from form
-    const name = document.querySelector('input[name="user_name"]').value;
-      const password = document.getElementById('password').value;
-      console.log(password);
-const plainTextPassword = password; 
-      console.log(plainTextPassword);
+    const employeeId = document.querySelector('input[name="employeeId"]').value;
+       const reEnterEmployeeId = document.querySelector('input[name="reEnterEmployeeId"]').value;
+      
+      console.log(employeeId);
+
+      console.log(reEnterEmployeeId);
 
   
     // use correct domain for your region
@@ -51,11 +52,11 @@ const plainTextPassword = password;
       userId,
       message: "OverDueConv", // optional
       contextVariables: [
-        {"name": "name", "value": name},
-        {"password": "password", "value": plainTextPassword},
+        {"employeeId": "employeeId", "value": employeeId},
+        {"reEnterEmployeeId": "reEnterEmployeeId", "value": reEnterEmployeeId},
            {"password1": "password", "value": password},
-           {"password3": "plainTextPassword", "value": plainTextPassword},
-           {"plainTextPassword": "plainTextPassword", "value": plainTextPassword},
+           {"password3": "reEnterEmployeeId", "value": reEnterEmployeeId},
+           {"plainTextPassword": "reEnterEmployeeId", "value": reEnterEmployeeId},
           {"plainTextPassword1": "plainTextPassword", "value": "abc"}
       ],
     });
