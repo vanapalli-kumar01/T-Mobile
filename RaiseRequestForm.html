@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+ 
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+ 
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+        
+        text-align: center;  background-color: #e4006a;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            align-self: center;
+            width: 100%;
+      }
+    </style>
+</head>
+<body>
+ 
+    <form action="#" method="post" id="requestForm">
+ 
+        <!-- Request Type Dropdown -->
+        <label for="requestType">Request Type:</label>
+        <select id="requestType" name="requestType" onchange="updateCategories()">
+            <option value="HR">HR</option>
+            <option value="FoodCourt">Food Court</option>
+            <option value="TechnicalSupport">Technical Support</option>
+        </select>
+ 
+       <div> <!-- Common Fields -->
+        <label for="category">Category:</label>
+        <select id="category" name="category"></select>
+    </div>
+        <div> 
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+    </div>
+        <div> 
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" required>
+    </div>
+        <div> 
+        <label for="employeeId">Employee ID:</label>
+        <input type="number" id="employeeId" name="employeeId" required>
+    </div>
+        <div> 
+            <button type="button" onclick="submitForm()">Raise Request</button>
+    </div>
+ 
+    </form>
+ 
+    <script>
+        function updateCategories() {
+            const requestType = document.getElementById("requestType").value;
+            const categoryDropdown = document.getElementById("category");
+            categoryDropdown.innerHTML = "";
+ 
+            if (requestType === "HR") {
+                const locations = ["T-Mobile - New York", "T-Mobile - Los Angeles", "T-Mobile - Chicago", "T-Mobile - Houston","T-Mobile - Phoenix", "T-Mobile - Philadelphia"]; // Add your locations
+                locations.forEach(location => {
+                    const option = document.createElement("option");
+                    option.value = location;
+                    option.text = location;
+                    categoryDropdown.add(option);
+                });
+            } else if (requestType === "FoodCourt") {
+                const complaintOption = document.createElement("option");
+                complaintOption.value = "Complaints";
+                complaintOption.text = "Complaints";
+ 
+                const suggestionOption = document.createElement("option");
+                suggestionOption.value = "Suggestions";
+                suggestionOption.text = "Suggestions";
+ 
+                categoryDropdown.add(complaintOption);
+                categoryDropdown.add(suggestionOption);
+            } else if (requestType === "TechnicalSupport") {
+                const technicalCategories = ["Network-related issues", "Account-related issues", "Billing-related issues", "Device-related issues", "Software Request", "Application Related Issue"];
+                technicalCategories.forEach(category => {
+                    const option = document.createElement("option");
+                    option.value = category;
+                    option.text = category;
+                    categoryDropdown.add(option);
+                });
+            }
+        }
+    </script>
+ 
+</body>
+</html>
