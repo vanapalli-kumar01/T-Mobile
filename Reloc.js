@@ -59,11 +59,11 @@ async function postData(url = '', auth, data = {}) {
       message: "OverDueConv", // optional
       contextVariables: [
         
-          {"employeeId": "employeeId", "value": employeeId},
-          {"currentLocation": "currentLocation", "value": currentLocation},
-          {"relocationTo": "relocationTo", "value": relocationTo},
-          {"reasonForRelocation": "reasonForRelocation", "value": reasonForRelocation},
-          {"approver": "approver", "value": approver}
+          {"name": "employeeId", "value": employeeId},
+          {"name": "currentLocation", "value": currentLocation},
+          {"name": "relocationTo", "value": relocationTo},
+          {"name": "reasonForRelocation", "value": reasonForRelocation},
+          {"name": "approver", "value": approver}
       ],
     });
        window.close();     
