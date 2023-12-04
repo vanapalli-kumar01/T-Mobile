@@ -80,6 +80,18 @@
     </form>
  
     <script>
+        function submitForm() {
+  // Get the form data
+  const formData = {
+    requestType: document.getElementById('requestType').value,
+    category: document.getElementById('category').value,
+    description: document.getElementById('description').value,
+    mobileNumber: document.getElementById('mobileNumber').value,
+    employeeId: document.getElementById('employeeId').value
+  };
+
+}
+
         function updateCategories() {
             const requestType = document.getElementById("requestType").value;
             const categoryDropdown = document.getElementById("category");
