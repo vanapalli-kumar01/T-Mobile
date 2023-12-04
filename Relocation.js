@@ -52,20 +52,20 @@ function hash(string) {
     console.log(approver);
   
     // use correct domain for your region
-    const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
+    // const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
     
-    // encode auth string
-    const authString = `${conversationId} || ${botId}`;
-    const auth = await hash(authString);
+    // // encode auth string
+    // const authString = `${conversationId} || ${botId}`;
+    // const auth = await hash(authString);
   
-    const res = await postData(domain, auth, {
-      botId,
-      conversationId,
-      userId,
-     message: "request successful", // optional
-      contextVariables: [
-        {"employeeId": "employeeId", "value": employeeId}
-      ],
-    });
+    // const res = await postData(domain, auth, {
+    //   botId,
+    //   conversationId,
+    //   userId,
+    //  message: "request successful", // optional
+    //   contextVariables: [
+    //     {"employeeId": "employeeId", "value": employeeId}
+    //   ],
+    // });
        window.close();     
   }
