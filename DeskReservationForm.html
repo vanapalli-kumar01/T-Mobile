@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Mobile Seat Booking</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .form-group {
+      width: 48%;
+      margin: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select, input[type="date"], input[type="radio"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    .available-seats {
+     
+      padding: 4px 2px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-right: 10px;
+      height:fit-content;
+    }
+
+    #choose-seat {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-right: 10px;
+      height:fit-content;
+     
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="date">Date of Booking:</label>
+      <input type="date" id="date" required>
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select id="city" required>
+        <option value="">Select City</option>
+        <option value="New York">New York</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value=" Chicago">Chicago</option>
+        <option value="Houston">Houston</option>
+        <option value="Phoenix">Phoenix</option>
+        <option value="Philadelphia">Philadelphia</option>
+        <option value="San Antonio">San Antonio</option>
+        <option value="San Diego">San Diego</option>
+        <option value="Dallas">Dallas</option>
+        <option value="San Jose">San Jose</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="dc">DC:</label>
+      <select id="dc" required>
+        <option value="">Select DC</option>
+        <option value="T-Mobile - New York">T-Mobile - New York</option>
+        <option value="T-Mobile - Los Angeles">T-Mobile - Los Angeles</option>
+        <option value="T-Mobile - Chicago">T-Mobile - Chicago</option>
+        <option value="T-Mobile - Houston">T-Mobile - Houston</option>
+        <option value="T-Mobile - Phoenix">T-Mobile - Phoenix</option>
+        <option value="T-Mobile - Philadelphia">T-Mobile - Philadelphia</option>
+        <option value="T-Mobile - San Antonio">T-Mobile - San Antonio</option>
+        <option value="T-Mobile - San Diego">T-Mobile - San Diego</option>
+        <option value="T-Mobile - Dallas">T-Mobile - Dallas</option>
+        <option value="T-Mobile - San Jose">T-Mobile - San Jose</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="building">Building:</label>
+      <select id="building" required>
+        <option value="">Select Building</option>
+        <option value="">Building-2</option>
+        <option value="">Building-19</option>
+        <option value="">Building-4</option>
+        <option value="">Building-14</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="floor">Floor:</label>
+      <select id="floor" required>
+        <option value="">Select Floor</option>
+        <option value="">First Floor</option>
+        <option value="">Second Floor</option>
+        <option value="">Third Floor</option>
+        <option value="">Fourth Floor</option>
+        <option value="">Fifth Floor</option>
+        <option value="">Sixth Floor</option>
+        <option value="">Seventh Floor</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="wing">Wing:</label>
+      <select id="wing" required>
+        <option value="">Select Wing</option>
+        <option value="">A-Wing</option>
+        <option value="">B-Wing</option>
+        <option value="">C-Wing</option>
+        <option value="">D-Wing</option>
+        <option value="">E-Wing</option>
+         </select>
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label><br/>
+      
+      <input type="radio" id="full-day" name="duration" value="full">
+      <label for="full-day">Full Day</label><br/>
+    
+      
+      <input type="radio" id="half-day" name="duration" value="half">
+      <label for="half-day">Half Day</label><br/>
+     
+
+    
+    <div class="available-seats">
+        Available Seats : <span id="available-seats-count"><b>35</b></span>
+    </div>
+    <div>
+    <button id="choose-seat">Choose Seat</button>   
+  </div>
+
+ 
