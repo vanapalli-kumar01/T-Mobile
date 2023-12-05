@@ -68,7 +68,7 @@ async function updateCategories() {
     // Get data from form
    const requestType = document.querySelector('select[name="requestType"]').value;
         const category = document.querySelector('select[name="category"]').value;
-    const mobileNumber = document.querySelector('select[name="mobileNumber"]').value;
+    const mobileNumber = document.querySelector('input[name="mobileNumber"]').value;
     const description = document.querySelector('textarea[name="description"]').value;
     const employeeId = document.querySelector('input[name="employeeId"]').value;
 
