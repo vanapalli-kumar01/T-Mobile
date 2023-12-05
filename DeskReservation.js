@@ -32,17 +32,21 @@ async function postData(url = '', auth, data = {}) {
 //      const botId = "59b84518-55ca-4d9f-bb9f-8ff5d8b2fe00";
       
     // Get data from form
-   const requestType = document.querySelector('select[name="requestType"]').value;
-        const category = document.querySelector('select[name="category"]').value;
-    const mobileNumber = document.querySelector('input[name="mobileNumber"]').value;
-    const description = document.querySelector('textarea[name="description"]').value;
-    const employeeId = document.querySelector('input[name="employeeId"]').value;
+   const city = document.querySelector('select[name="city"]').value;
+        const dc = document.querySelector('select[name="dc"]').value;
+    const duration = document.querySelector('input[name="duration"]').value;
+    const wing = document.querySelector('select[name="wing"]').value;
+    const dateOfBooking = document.querySelector('input[name="dateOfBooking"]').value;
+          const building = document.querySelector('select[name="building"]').value;
+          const floor = document.querySelector('select[name="floor"]').value;
 
-      console.log(employeeId);
-    console.log(description);
-    console.log(mobileNumber);
-    console.log(category);
-    console.log(requestType);
+      console.log(city);
+    console.log(dc);
+    console.log(duration);
+    console.log(wing);
+    console.log(dateOfBooking);
+       console.log(building);
+       console.log(floor);
 
 
   
@@ -60,11 +64,13 @@ async function postData(url = '', auth, data = {}) {
       message: "OverDueConv", // optional
       contextVariables: [
          
-        {"name": "requestType", "value": requestType},
-        {"name": "category", "value": category},
-        {"name": "description", "value": description},
-        {"name": "mobileNumber", "value": mobileNumber},
-        {"name": "employeeId", "value": employeeId}
+        {"name": "floor", "value": floor},
+        {"name": "duration", "value": duration},
+        {"name": "wing", "value": wing},
+        {"name": "building", "value": building},
+        {"name": "dc", "value": dc},
+           {"name": "city", "value": city},
+           {"name": "dateOfBooking", "value": dateOfBooking}
          
       ],
     });
