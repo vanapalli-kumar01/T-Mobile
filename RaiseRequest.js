@@ -93,12 +93,13 @@ async function updateCategories() {
       userId,
       message: "OverDueConv", // optional
       contextVariables: [
-        
-          {"name": "employeeId", "value": employeeId},
-          {"name": "description", "value": description},
-          {"name": "relocationTo", "value": mobileNumber},
-          {"name": "reasonForRelocation", "value": category},
-          {"name": "approver", "value": requestType}
+         
+        {"name": "requestType", "value": requestType},
+        {"name": "category", "value": category},
+        {"name": "description", "value": description},
+        {"name": "mobileNumber", "value": mobileNumber},
+        {"name": "employeeId", "value": employeeId}
+         
       ],
     });
        window.close();     
