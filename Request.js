@@ -1,4 +1,5 @@
 // Post data to Web View API
+
 async function postData(url = '', auth, data = {}) {
     const response = await fetch(url, {
       method: 'POST',
@@ -19,6 +20,40 @@ async function postData(url = '', auth, data = {}) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
+async function updateCategories() {
+            const requestType = document.getElementById("requestType").value;
+            const categoryDropdown = document.getElementById("category");
+            categoryDropdown.innerHTML = "";
+ 
+            if (requestType === "HR") {
+                const locations = ["T-Mobile - New York", "T-Mobile - Los Angeles", "T-Mobile - Chicago"]; // Add your locations
+                locations.forEach(location => {
+                    const option = document.createElement("option");
+                    option.value = location;
+                    option.text = location;
+                    categoryDropdown.add(option);
+                });
+            } else if (requestType === "FoodCourt") {
+                const complaintOption = document.createElement("option");
+                complaintOption.value = "Complaints";
+                complaintOption.text = "Complaints";
+ 
+                const suggestionOption = document.createElement("option");
+                suggestionOption.value = "Suggestions";
+                suggestionOption.text = "Suggestions";
+ 
+                categoryDropdown.add(complaintOption);
+                categoryDropdown.add(suggestionOption);
+            } else if (requestType === "TechnicalSupport") {
+                const technicalCategories = ["Network-related issues", "Account-related issues", "Billing-related issues", "Device-related issues", "Software Request", "Application Related Issue"];
+                technicalCategories.forEach(category => {
+                    const option = document.createElement("option");
+                    option.value = category;
+                    option.text = category;
+                    categoryDropdown.add(option);
+                });
+            }
+        }
   
   // Post data when form is submitted
   submitForm = async function() {
