@@ -20,10 +20,10 @@ async function postData(url = '', auth, data = {}) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
-async function selectSeat(cubicleID) {
+selectSeat = async function(cubicleID) {
     const seatId = cubicleID;
   console.log(seatId);
-    }
+    
  
   
     // use correct domain for your region
