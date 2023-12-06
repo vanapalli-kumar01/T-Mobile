@@ -20,6 +20,9 @@ async function postData(url = '', auth, data = {}) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
   }
+async function selectedSeat(cubicleID) {
+      alert("Seat " + cubicleID +" already selected please choose another seat:");
+    }
 selectSeat = async function(cubicleID) {
     const seatId = cubicleID;
   console.log(seatId);
