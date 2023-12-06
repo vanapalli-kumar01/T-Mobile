@@ -24,7 +24,10 @@ selectSeat = async function(cubicleID) {
     const seatId = cubicleID;
   console.log(seatId);
     
- 
+   const queryParams = new URLSearchParams(document.location.search);
+    const userId = queryParams.get('userId');
+    const conversationId = queryParams.get('convId');
+    const botId = queryParams.get('botId');
   
     // use correct domain for your region
     const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
