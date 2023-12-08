@@ -71,12 +71,15 @@ async function updateCategories() {
     const mobileNumber = document.querySelector('input[name="mobileNumber"]').value;
     const description = document.querySelector('textarea[name="description"]').value;
     const employeeId = document.querySelector('input[name="employeeId"]').value;
+       const dateOfRequest = document.querySelector('input[name="dateOfRequest"]').value;
+
 
       console.log(employeeId);
     console.log(description);
     console.log(mobileNumber);
     console.log(category);
     console.log(requestType);
+       console.log(dateOfRequest);
 
 
   
@@ -98,7 +101,8 @@ async function updateCategories() {
         {"name": "category", "value": category},
         {"name": "description", "value": description},
         {"name": "mobileNumber", "value": mobileNumber},
-        {"name": "employeeId", "value": employeeId}
+        {"name": "employeeId", "value": employeeId},
+          {"name": "employeeId", "value": dateOfRequest}
          
       ],
     });
