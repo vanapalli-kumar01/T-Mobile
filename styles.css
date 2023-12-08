@@ -2,6 +2,25 @@ body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
+.lp-window-root .chips-wrapper .chips-row .chips-item-container>.chips-item {
+    flex-shrink: 0;
+ 
+    padding: 0 ;
+10px
+    border: ;
+1px
+solid #d6d6d6
+    border-radius: ;
+16px
+    line-height: 30px;
+    font-size: 12px;
+    white-space: nowrap;
+    outline: 0 none;
+    color: white;
+    /* background: transparent none; */
+    cursor: pointer;
+    background-color: #e4006a;
+}
  
 /* Basic styling for the navigation bar */
 nav {
