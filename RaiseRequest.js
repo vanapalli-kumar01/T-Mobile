@@ -102,7 +102,7 @@ async function updateCategories() {
         {"name": "description", "value": description},
         {"name": "mobileNumber", "value": mobileNumber},
         {"name": "employeeId", "value": employeeId},
-          {"name": "employeeId", "value": dateOfRequest}
+          {"name": "dateOfRequest", "value": dateOfRequest}
          
       ],
     });
