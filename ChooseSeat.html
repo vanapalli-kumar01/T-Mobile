@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="ChooseSeat.js" type="text/javascript"></script>
+  
+ <script src="ChooseSeat.js" type="text/javascript"></script>
   <title>Choose seat</title>
   <h1>Please Choose Your Seat:</h1>
   <style>
@@ -12,13 +13,13 @@
         
     }
     body {
-      font-family: sans-serif;
+        font-family: 'Times New Roman';
       margin: 20px;
     }
 
     .room {
       width: 800px;
-      height: 600px;
+      height: 500px;
       border: 1px solid #e4006a;
       padding: 20px;
       display: flex;
@@ -39,13 +40,13 @@
     .table-seat_available{
       width: 40px;
       height: 40px;
-      border-radius: 20%;
+      border-radius: 50%;
       background-color: #008000;
     }
     .table-seat_unavailable{
       width: 40px;
       height: 40px;
-      border-radius: 20%;
+      border-radius: 50%;
       background-color: #FF0000;
     }
     
@@ -69,11 +70,11 @@
 <body>
   <div class="room">
     <div class="table">
-      <div class="table-seat_unavailable" onclick="selectSeat('019')">
+      <div class="table-seat_unavailable" onclick="selectedSeat('019')">
       <span class="seat-id">019</span>
       </div>
       
-    <div class="table-seat_unavailable" onclick="selectSeat('020')">
+    <div class="table-seat_unavailable" onclick="selectedSeat('020')">
         <span class="seat-id">020</span>
     </div>
       <div class="table-seat_available" onclick="selectSeat('021')">
@@ -84,13 +85,13 @@
     </div>
     </div>
     <div class="table">
-      <div class="table-seat_unavailable"onclick="selectSeat('023')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('023')">
         <span class="seat-id">023</span>
       </div>
       <div class="table-seat_available"onclick="selectSeat('024')">
         <span class="seat-id">024</span>
       </div>
-      <div class="table-seat_unavailable"onclick="selectSeat('025')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('025')">
         <span class="seat-id">025</span>
       </div>
       <div class="table-seat_available"onclick="selectSeat('026')">
@@ -98,9 +99,9 @@
       </div>
     </div>
 
-    <div class="cabin"style="transform:rotate(90deg); transform-origin:  40%;">
+    <div class="cabin"style="transform:rotate(145deg);">
       <div class="cabin-row">
-        <div class="table-seat_unavailable"onclick="selectSeat('027')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('027')">
         <span class="seat-id">027</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('028')">
@@ -109,21 +110,21 @@
         <div class="table-seat_available"onclick="selectSeat('029')">
         <span class="seat-id">029</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('030')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('030')">
         <span class="seat-id">030</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('031')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('031')">
         <span class="seat-id">031</span>
         </div>
       </div>
       <div class="cabin-row">
-        <div class="table-seat_unavailable"onclick="selectSeat('032')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('032')">
         <span class="seat-id">032</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('033')">
         <span class="seat-id">033</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('034')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('034')">
         <span class="seat-id">034</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('035')">
@@ -142,10 +143,10 @@
         <div class="table-seat_available"onclick="selectSeat('038')">
         <span class="seat-id">038</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('039')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('039')">
         <span class="seat-id">039</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('040')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('040')">
         <span class="seat-id">040</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('041')">
@@ -153,16 +154,16 @@
         </div>
       </div>
       <div class="cabin-row">
-        <div class="table-seat_unavailable"onclick="selectSeat('042')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('042')">
         <span class="seat-id">042</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('043')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('043')">
         <span class="seat-id">043</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('044')">
         <span class="seat-id">044</span>
         </div>
-        <div class="table-seat_unavailable"onclick="selectSeat('045')">
+        <div class="table-seat_unavailable"onclick="selectedSeat('045')">
         <span class="seat-id">045</span>
         </div>
         <div class="table-seat_available"onclick="selectSeat('046')">
@@ -172,14 +173,14 @@
     </div>
 
     <div class="table" style="transform: rotate(90deg)";>
-      <div class="table-seat_unavailable"onclick="selectSeat('047')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('047')">
         <span class="seat-id">047</span>
       </div>
-      <div class="table-seat_unavailable"onclick="selectSeat('048')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('048')">
         <span class="seat-id">048</span>
       </div>
       <div class="table-seat_available"onclick="selectSeat('049')">
-        <span class="seat-id">"049"</span>
+        <span class="seat-id">049</span>
       </div>
     </div>
 
@@ -187,28 +188,28 @@
       <div class="table-seat_available"onclick="selectSeat('050')">
         <span class="seat-id">050</span>
       </div>
-      <div class="table-seat_unavailable"onclick="selectSeat('051')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('051')">
         <span class="seat-id">051</span>
       </div>
     </div>
     
     <div class="table" style="transform: rotate(360deg); transform-origin: bottom right;">
-      <div class="table-seat_unavailable"onclick="selectSeat('052')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('052')">
         <span class="seat-id">052</span>
       </div>
       <div class="table-seat_available"onclick="selectSeat('053')">
         <span class="seat-id">053</span>
       </div>
-      <div class="table-seat_unavailable"onclick="selectSeat('054')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('054')">
         <span class="seat-id">054</span>
       </div>
-      <div class="table-seat_unavailable"onclick="selectSeat('055')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('055')">
         <span class="seat-id">055</span>
       </div>
     </div>
 
     <div class="table"> <div class="table-seat"></div>
-      <div class="table-seat_unavailable"onclick="selectSeat('056')">
+      <div class="table-seat_unavailable"onclick="selectedSeat('056')">
         <span class="seat-id">056</span>
       </div>
       <div class="table-seat_unavailable"onclick="selectedSeat('057')">
@@ -219,4 +220,5 @@
       </div>
     </div>
   </div> </body>
+ 
 </html>
